@@ -45,32 +45,34 @@ make menuconfig
 # Compile the base kernel source code
 
 ```
-make -j 4 clean bzImage modules
+make -j 8
 ls arch/x86/boot/bzImage
 ```
-# Install the new custom kernel
-
-```
-# TBD
-# cp arch/x86/boot/bzImage /boot/vmlinuz-3.10.89vbird
-# cp .config /boot/config-3.10.89vbird
-# chmod a+x /boot/vmlinuz-3.10.89vbird
-# cp System.map /boot/System.map-3.10.89vbird
-# gzip -c Module.symvers > /boot/symvers-3.10.89vbird.gz
-# restorecon -Rv /boot
-```
-
 # Install the new custom kernel modules
 
 ```
-make modules_install
-ls /lib/modules/
+make modules_install -j 8
+ls /lib/modules/3.10.0
+```
+
+# Install the new custom kernel
+
+```
+
+# OR
+make install -j 8
+ls /boot/System.map-3.10.0
+ls /boot/vmlinuz-3.10.0
+ls /boot/initramfs-3.10.0.img
 ```
 
 # Create the Initial Ram Disk (initrd)
 
 ```
 dracut -v /boot/initramfs-3.10.img 3.10
+
+# OR
+# update-initramfs -c -k 3.10.0
 ```
 
 # Update the boot loader menu
@@ -78,6 +80,9 @@ dracut -v /boot/initramfs-3.10.img 3.10
 ```
 # TBD
 # grub2-mkconfig -o /boot/grub2/grub.cfg
+
+# OR
+# update-grub
 ```
 
 # Verify the new custom kernel by rebooting this building machine
