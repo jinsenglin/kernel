@@ -8,6 +8,7 @@ vagrant up
 vagrant ssh
 
 sudo su
+yum install -y ncurses-devel
 yum group install -y "Development Tools"
 ```
 
@@ -36,7 +37,11 @@ make mrproper
 touch .config
 make menuconfig
 
-# Hint lazy way is `cp /boot/config-3.10.0-327.el7.x86_64 /usr/src/kernels/3.10/.config`
+# Hint lazy way is `cp /boot/config-3.10.0-327.el7.x86_64 /usr/src/kernels/linux-3.10/.config`
 ```
 
-# 
+# Compile the base kernel source code
+
+```
+make -j 4 clean bzImage modules
+```
