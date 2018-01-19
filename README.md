@@ -47,7 +47,7 @@ make -j 4 clean bzImage modules
 ls arch/x86/boot/bzImage
 ```
 
-# Install the new custom kernel
+# Install the new custom kernel modules
 
 ```
 make modules_install
