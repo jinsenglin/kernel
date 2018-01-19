@@ -44,13 +44,14 @@ make menuconfig
 
 ```
 make -j 4 clean bzImage modules
+ls arch/x86/boot/bzImage
 ```
 
 # Install the new custom kernel
 
 ```
 make modules_install
-ll /lib/modules/
+ls /lib/modules/
 
 # TBD
 # cp arch/x86/boot/bzImage /boot/vmlinuz-3.10.89vbird
