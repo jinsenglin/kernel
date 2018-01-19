@@ -1,4 +1,6 @@
-REF http://linux.vbird.org/linux_basic/0540kernel.php
+REF1 http://linux.vbird.org/linux_basic/0540kernel.php
+
+REF2 https://medium.freecodecamp.org/building-and-installing-the-latest-linux-kernel-from-source-6d8df5345980
 
 # Prepare a building machine
 
