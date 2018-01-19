@@ -46,13 +46,9 @@ make menuconfig
 make -j 4 clean bzImage modules
 ls arch/x86/boot/bzImage
 ```
-
-# Install the new custom kernel modules
+# Install the new custom kernel
 
 ```
-make modules_install
-ls /lib/modules/
-
 # TBD
 # cp arch/x86/boot/bzImage /boot/vmlinuz-3.10.89vbird
 # cp .config /boot/config-3.10.89vbird
@@ -60,6 +56,13 @@ ls /lib/modules/
 # cp System.map /boot/System.map-3.10.89vbird
 # gzip -c Module.symvers > /boot/symvers-3.10.89vbird.gz
 # restorecon -Rv /boot
+```
+
+# Install the new custom kernel modules
+
+```
+make modules_install
+ls /lib/modules/
 ```
 
 # Create the Initial Ram Disk (initrd)
