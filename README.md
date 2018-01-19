@@ -66,3 +66,14 @@ ll /lib/modules/
 ```
 dracut -v /boot/initramfs-3.10.img 3.10
 ```
+
+# Update the boot loader menu
+
+```
+# TBD
+# grub2-mkconfig -o /boot/grub2/grub.cfg
+```
+
+# Verify the new custom kernel by rebooting this building machine
+
+
