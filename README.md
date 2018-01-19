@@ -69,7 +69,7 @@ ls /boot/initramfs-3.10.0.img
 # Create the Initial Ram Disk (initrd)
 
 ```
-dracut -v /boot/initramfs-3.10.img 3.10
+dracut -v /boot/initramfs-3.10.0.img 3.10.0
 
 # OR
 # update-initramfs -c -k 3.10.0
