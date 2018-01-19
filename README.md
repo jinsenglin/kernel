@@ -8,7 +8,7 @@ vagrant up
 vagrant ssh
 
 sudo su
-yum install -y ncurses-devel
+yum install -y ncurses-devel bc
 yum group install -y "Development Tools"
 ```
 
