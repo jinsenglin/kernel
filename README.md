@@ -5,6 +5,7 @@ Addtional Resources
 * http://linux.vbird.org/linux_basic/0540kernel.php
 * https://medium.freecodecamp.org/building-and-installing-the-latest-linux-kernel-from-source-6d8df5345980
 * https://www.howtoforge.com/kernel_compilation_centos
+* http://connecttech.com/resource-center/kdb271-making-sense-linux-release-numbers-kernel-revisions/
 
 # Prepare a building machine
 
