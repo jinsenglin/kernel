@@ -4,9 +4,7 @@ REF2 https://medium.freecodecamp.org/building-and-installing-the-latest-linux-ke
 
 REF3 https://linode.com/docs/tools-reference/custom-kernels-distros/custom-compiled-kernel-centos-7/
 
-REF4 https://wiki.centos.org/HowTos/Custom_Kernel
-
-REF5 https://www.howtoforge.com/kernel_compilation_centos
+REF4 https://www.howtoforge.com/kernel_compilation_centos
 
 # Prepare a building machine
 

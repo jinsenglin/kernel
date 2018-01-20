@@ -1,6 +1,4 @@
-REF1 https://wiki.centos.org/HowTos/Custom_Kernel
-
-REF2 https://www.howtoforge.com/kernel_compilation_centos
+REF https://wiki.centos.org/HowTos/Custom_Kernel
 
 # Prepare a building machine
 
