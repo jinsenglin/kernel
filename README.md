@@ -11,18 +11,19 @@ REF4 https://www.howtoforge.com/kernel_compilation_centos
 NOTE: DON'T USE VAGRANT
 
 ```
-vagrant init bento/centos-7.2 --box-version 2.3.1
-vagrant up
-vagrant ssh
+# boot virtualbox machine with disc http://archive.kernel.org/centos-vault/7.2.1511/isos/x86_64/CentOS-7-x86_64-Minimal-1511.iso
 
-sudo su
-yum install -y ncurses-devel bc
+# activate connections
+nmtui
+
+yum install -y wget ncurses-devel bc
 yum group install -y "Development Tools"
 ```
 
 # Download a base kernel
 
 ```
+cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.10.tar.xz
 wget https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.10.1.tar.xz
 ```
@@ -30,7 +31,10 @@ wget https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.10.1.tar.xz
 # Unpack the base kernel
 
 ```
-tar -Jxvf linux-3.10.tar.xz -C /usr/src/kernels/
+tar -xvf linux-3.10.tar.xz
+cd linux-3.10
+
+#tar -Jxvf linux-3.10.tar.xz -C /usr/src/kernels/
 ```
 
 # Clean the base kernel source code
@@ -44,6 +48,7 @@ make mrproper
 
 ```
 touch .config
+make oldconfig
 make menuconfig
 
 # Hint lazy way is `cp /boot/config-3.10.0-327.el7.x86_64 /usr/src/kernels/linux-3.10/.config`
