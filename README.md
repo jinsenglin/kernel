@@ -8,6 +8,8 @@ REF4 https://www.howtoforge.com/kernel_compilation_centos
 
 # Prepare a building machine
 
+NOTE: DON'T USE VAGRANT
+
 ```
 vagrant init bento/centos-7.2 --box-version 2.3.1
 vagrant up
