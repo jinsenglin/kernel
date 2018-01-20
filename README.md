@@ -76,7 +76,9 @@ ls /lib/modules/3.10.0
 rm -rf /boot/*
 
 make install -j 8
+ls /boot/System.map
 ls /boot/System.map-3.10.0
+ls /boot/vmlinuz
 ls /boot/vmlinuz-3.10.0
 ls /boot/initramfs-3.10.0.img
 ```
@@ -84,7 +86,7 @@ ls /boot/initramfs-3.10.0.img
 # Create the Initial Ram Disk (initrd)
 
 ```
-mkinitrd /boot/initrd-3.10.img /boot/vmlinuz-3.10
+mkinitrd /boot/initrd-3.10.0.img /boot/vmlinuz-3.10.0
 
 # OR
 # dracut -v /boot/initramfs-3.10.0.img 3.10.0
