@@ -86,7 +86,8 @@ ls /boot/initramfs-3.10.0.img
 # Create the Initial Ram Disk (initrd)
 
 ```
-mkinitrd /boot/initrd-3.10.0.img 3.10.0
+mkinitrd /boot/initrd-3.10.0.img 3.10.0 # will use 1. dracut command 2. /lib/modules/3.10.0/ dir
+ls /boot/initrd-3.10.0.img
 
 # OR
 # dracut -v /boot/initramfs-3.10.0.img 3.10.0
