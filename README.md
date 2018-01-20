@@ -1,10 +1,10 @@
-REF1 http://linux.vbird.org/linux_basic/0540kernel.php
+REF https://linode.com/docs/tools-reference/custom-kernels-distros/custom-compiled-kernel-centos-7/
 
-REF2 https://medium.freecodecamp.org/building-and-installing-the-latest-linux-kernel-from-source-6d8df5345980
+Addtional Resources
 
-REF3 https://linode.com/docs/tools-reference/custom-kernels-distros/custom-compiled-kernel-centos-7/
-
-REF4 https://www.howtoforge.com/kernel_compilation_centos
+* http://linux.vbird.org/linux_basic/0540kernel.php
+* https://medium.freecodecamp.org/building-and-installing-the-latest-linux-kernel-from-source-6d8df5345980
+* https://www.howtoforge.com/kernel_compilation_centos
 
 # Prepare a building machine
 
@@ -34,7 +34,8 @@ wget https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.10.1.tar.xz
 tar -xvf linux-3.10.tar.xz
 cd linux-3.10
 
-#tar -Jxvf linux-3.10.tar.xz -C /usr/src/kernels/
+# OR
+# tar -Jxvf linux-3.10.tar.xz -C /usr/src/kernels/
 ```
 
 # Clean the base kernel source code
@@ -62,6 +63,8 @@ ls arch/x86/boot/bzImage
 # Install the new custom kernel modules
 
 ```
+rm -rf /lib/modules/3.10.0
+
 make modules_install -j 8
 ls /lib/modules/3.10.0
 ```
