@@ -113,3 +113,7 @@ error: file `/grub2/i386-pc/normal.mod` not found.
 Entering rescue mode...
 grub rescue> _
 ```
+
+Additional Resources
+
+* https://www.openfoundry.org/tw/foss-programs/9267-linux-grub2-fixing
