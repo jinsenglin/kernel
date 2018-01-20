@@ -108,4 +108,8 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 
 # Verify the new custom kernel by rebooting this building machine
 
-
+```
+error: file `/grub2/i386-pc/normal.mod` not found.
+Entering rescue mode...
+grub rescue> _
+```
