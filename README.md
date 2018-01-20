@@ -69,6 +69,8 @@ ls /lib/modules/3.10.0
 # Install the new custom kernel
 
 ```
+rm -rf /boot/*
+
 make install -j 8
 ls /boot/System.map-3.10.0
 ls /boot/vmlinuz-3.10.0
