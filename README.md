@@ -73,6 +73,7 @@ ls /lib/modules/3.10.0
 # Install the new custom kernel
 
 ```
+cp -r /boot /root/boot-backup
 rm -rf /boot/*
 
 make install -j 8
