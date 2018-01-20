@@ -99,6 +99,7 @@ ls /boot/initrd-3.10.0.img
 # Update the boot loader menu
 
 ```
+mkdir /boot/grub2
 grub2-mkconfig -o /boot/grub2/grub.cfg
 
 # OR
