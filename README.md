@@ -48,10 +48,9 @@ make mrproper
 
 ```
 touch .config
-make oldconfig
 make menuconfig
 
-# Hint lazy way is `cp /boot/config-3.10.0-327.el7.x86_64 /usr/src/kernels/linux-3.10/.config`
+# Hint lazy way is `cp /boot/config-3.10.0-327.el7.x86_64 .config && make oldconfig`
 ```
 
 # Compile the base kernel source code
@@ -70,8 +69,6 @@ ls /lib/modules/3.10.0
 # Install the new custom kernel
 
 ```
-
-# OR
 make install -j 8
 ls /boot/System.map-3.10.0
 ls /boot/vmlinuz-3.10.0
@@ -81,7 +78,10 @@ ls /boot/initramfs-3.10.0.img
 # Create the Initial Ram Disk (initrd)
 
 ```
-dracut -v /boot/initramfs-3.10.0.img 3.10.0
+mkinitrd /boot/initrd-3.10.img /boot/vmlinuz-3.10
+
+# OR
+# dracut -v /boot/initramfs-3.10.0.img 3.10.0
 
 # OR
 # update-initramfs -c -k 3.10.0
@@ -90,8 +90,7 @@ dracut -v /boot/initramfs-3.10.0.img 3.10.0
 # Update the boot loader menu
 
 ```
-# TBD
-# grub2-mkconfig -o /boot/grub2/grub.cfg
+grub2-mkconfig -o /boot/grub2/grub.cfg
 
 # OR
 # update-grub
