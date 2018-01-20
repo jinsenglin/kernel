@@ -116,4 +116,5 @@ grub rescue> _
 
 Additional Resources
 
+* https://read01.com/zh-tw/zyP53.html
 * https://www.openfoundry.org/tw/foss-programs/9267-linux-grub2-fixing
