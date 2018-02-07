@@ -74,7 +74,6 @@ ls /lib/modules/3.10.0
 
 ```
 cp -r /boot /root/boot-backup
-rm -rf /boot/*
 
 make install -j 8
 ls /boot/System.map
@@ -108,6 +107,13 @@ grub2-mkconfig -o /boot/grub2/grub.cfg
 ```
 
 # Verify the new custom kernel by rebooting this building machine
+
+boot menu items
+* CentOS Linux (3.10-327.e17.x86_64) 7 (Core)
+* CentOS Linux (3.10.0) 7 (Core) # THIS IS THE NEW KERNEL
+* CentOS Linux (0-rescue-xxxxxxxxxxxxxxxxxxx) 7 (Core)
+
+# About normal.mod not found
 
 ```
 error: file `/grub2/i386-pc/normal.mod` not found.
