@@ -26,7 +26,6 @@ yum group install -y "Development Tools"
 ```
 cd /usr/src
 wget https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.10.tar.xz
-wget https://cdn.kernel.org/pub/linux/kernel/v3.x/linux-3.10.1.tar.xz
 ```
 
 # Unpack the base kernel
